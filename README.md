@@ -1,0 +1,1 @@
+# Newsimages-Image-Retrieval-Mediaeval-Competition-2025
