@@ -1,4 +1,3 @@
-# Newsimages-Image-Retrieval-Mediaeval-Competition-2025
 Image Retrieval for Mediaeval Competition (NewsImages Task)
 
 1. Run faiss_index_pipeline.py in 'build' mode to build index.faiss and ids.npy
