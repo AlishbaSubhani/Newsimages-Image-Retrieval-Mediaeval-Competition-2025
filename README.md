@@ -24,7 +24,10 @@ Evaluation Metric: Mean Reciprocal Rank (MRR), Precision@K, and Likert-scale rat
 
 Top Score: VIVID achieved 3.401, outperforming both retrieval methods and the baseline.
 
-Dataset	   Method	Avg. Score
-Small       VIVID	      3.401
-Large	   PromptForge	   3.194
-	         TRACE	      3.114
+| Dataset | Method      | Avg. Score |
+| ------- | ----------- | ---------- |
+| Small   | VIVID       | **3.401**  |
+| Large   | PromptForge | 3.194      |
+|         | TRACE       | 3.114      |
+
+
