@@ -1,10 +1,30 @@
-**Image Retrieval for Mediaeval Competition (NewsImages Task)**
+📰 **Project Overview – MediaEval 2025: NewsImages Task**
 
-1. Run faiss_index_pipeline.py in 'build' mode to build index.faiss and ids.npy using this command
-   'python pipeline.py --mode build --csv Dataset/newsarticles.csv --images_dir Dataset/newsimages/ --index_path index.faiss --ids_path ids.npy'
-2. Run finetuning_clip.py to finetune the clip model on newsiages provided by competition administrators.
-3. Run retrieval_large.py to retrieve images for all 8500 articles listed in newsarticles.csv using the finetuned clip model's checkpoint.
+This project presents Team CVG-IBA’s submission for the MediaEval 2025 NewsImages Task, which challenges participants to generate or retrieve relevant and ethically appropriate images for online news articles. The goal is to balance relevance with non-photorealistic compliance—producing visuals that enhance article understanding without misleading realism.
 
-4. Run retrieval_small.py to retrieve images for the subset of 30 articles listed in subset.csv.
+We participated in both subtasks: (This repository contains code for retrieval only)
 
+🔍 **Retrieval**
 
+Methods Used: **SEEK** (for small subset) and **TRACE** (for large dataset).
+
+Tech Stack: Fine-tuned CLIP model + FAISS indexing.
+
+**Highlights**:
+
+CLIP fine-tuned on news article-image pairs.
+
+FAISS used for fast cosine similarity–based image lookup.
+
+SEEK used CLIP directly on titles; TRACE utilized enriched embeddings with tags.
+
+📊 Results
+
+Evaluation Metric: Mean Reciprocal Rank (MRR), Precision@K, and Likert-scale ratings.
+
+Top Score: VIVID achieved 3.401, outperforming both retrieval methods and the baseline.
+
+Dataset	   Method	Avg. Score
+Small       VIVID	      3.401
+Large	   PromptForge	   3.194
+	         TRACE	      3.114
